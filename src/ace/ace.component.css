@@ -1,0 +1,8 @@
+.main-container {
+  background-color: #e8e8e8;
+  overflow: hidden;
+}
+
+.ace-editor-output {
+  height: 100vh;
+}
