@@ -5,12 +5,18 @@ var fileDownload = require("js-file-download");
 
 export const AceContainer = () => {
   const [editorInput, setEditorInput] = useState("");
+  const [iframeInput, setIframeInput] = useState("");
   const [theme, setTheme] = useState("github");
 
   const onDownload = () => fileDownload(editorInput, "download.txt");
 
   const onChange = (newValue) => {
     setEditorInput(newValue);
+  };
+
+  const onRun = () => {
+    console.log(editorInput);
+    setIframeInput(editorInput);
   };
 
   const switchTheme = () => {
@@ -20,10 +26,11 @@ export const AceContainer = () => {
 
   return (
     <Ace
-      editorInput={editorInput}
+      iframeInput={iframeInput}
       onChange={onChange}
       theme={theme}
       onDownload={onDownload}
+      onRun={onRun}
       switchTheme={switchTheme}
     />
   );

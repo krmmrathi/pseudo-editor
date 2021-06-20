@@ -5,9 +5,10 @@ import { IframeComponent } from "./iframe/iframe.component";
 import { TaskBarComponent } from "./taskbar/taskbar.component";
 
 export const Ace = ({
-  editorInput,
+  iframeInput,
   onChange,
   onDownload,
+  onRun,
   switchTheme,
   theme,
 }) => {
@@ -15,13 +16,17 @@ export const Ace = ({
   return (
     <>
       <div style={{ overflow: "hidden", backgroundColor: bgColor }}>
-        <TaskBarComponent onDownload={onDownload} OnThemeChange={switchTheme} />
+        <TaskBarComponent
+          onRun={onRun}
+          onDownload={onDownload}
+          OnThemeChange={switchTheme}
+        />
         <Grid container className="ace-editor-output" spacing={2}>
           <Grid item md={6}>
             <EditorComponent onChange={onChange} theme={theme} />
           </Grid>
           <Grid item md={6}>
-            <IframeComponent content={editorInput} />
+            <IframeComponent content={iframeInput} />
           </Grid>
         </Grid>
       </div>
