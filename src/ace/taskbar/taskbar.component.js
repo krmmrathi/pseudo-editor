@@ -1,19 +1,36 @@
-import { Box, Button, Grid } from "@material-ui/core";
+import { Box, Grid, IconButton, Tooltip } from "@material-ui/core";
+import GetAppIcon from "@material-ui/icons/GetApp";
+import SettingsBrightnessIcon from "@material-ui/icons/SettingsBrightness";
 
 export const TaskBarComponent = ({ onDownload, OnThemeChange }) => {
   return (
-    <Box p={4} className="taskbar">
-      <Grid container justify="center" alignItems="stretch" spacing={2}>
+    <Box p={2}>
+      <Grid container alignItems="stretch" spacing={2}>
         <Grid item md={"auto"} xs="auto">
-          <Button disabled={false} onClick={onDownload} color={"primary"}>
-            Download
-          </Button>
+          <Tooltip title="Download Source Code">
+            <IconButton
+              color="primary"
+              aria-label="Download Source Code"
+              component="span"
+              onClick={onDownload}
+            >
+              <GetAppIcon />
+            </IconButton>
+          </Tooltip>
         </Grid>
 
         <Grid item md={"auto"} xs="auto">
-          <Button disabled={false} onClick={OnThemeChange} color={"secondary"}>
-            Switch Mode
-          </Button>
+          <Tooltip title="Switch Theme">
+            <IconButton
+              color="secondary"
+              aria-label="Switch Theme"
+              component="span"
+              onClick={OnThemeChange}
+              size="large"
+            >
+              <SettingsBrightnessIcon />
+            </IconButton>
+          </Tooltip>
         </Grid>
       </Grid>
     </Box>

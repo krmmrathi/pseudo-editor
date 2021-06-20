@@ -6,3 +6,7 @@
 .ace-editor-output {
   height: 100vh;
 }
+
+.MuiIconButton-root {
+  background-color: white !important;
+}

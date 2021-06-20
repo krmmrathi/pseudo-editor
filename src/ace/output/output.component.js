@@ -1,15 +1,7 @@
-// import { useEffect } from "react";
-
-// export const OutputComponent = ({ editorInput }) => {
-//   useEffect(() => {
-//     document.getElementById("youriframe").contentWindow.location.reload(true);
-//   }, [editorInput]);
-//   return <iframe id="youriframe" srcDoc={editorInput}></iframe>;
-// };
 import React from "react";
-import { colors } from "@material-ui/core";
 export const OutputComponent = (props) => {
   let iframe_ref = null;
+
   const writeHTML = (frame) => {
     if (!frame) {
       return;
