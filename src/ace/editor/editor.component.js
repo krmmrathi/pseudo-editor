@@ -16,6 +16,10 @@ export const EditorComponent = ({ onChange, theme }) => {
       width={"100%"}
       height={"100%"}
       displayIndentGuides={true}
+      wrapEnabled={true}
+      highlightActiveLine={true}
+      showPrintMargin={true}
+      showGutter={true}
     />
   );
 };

@@ -4,7 +4,7 @@ import SettingsBrightnessIcon from "@material-ui/icons/SettingsBrightness";
 
 export const TaskBarComponent = ({ onDownload, OnThemeChange }) => {
   return (
-    <Box p={2}>
+    <Box px={5} pt={2} pb={2}>
       <Grid container alignItems="stretch" spacing={2}>
         <Grid item md={"auto"} xs="auto">
           <Tooltip title="Download Source Code">
