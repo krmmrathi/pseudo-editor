@@ -12,9 +12,7 @@ export const EditorComponent = ({ onChange, theme }) => {
       theme={theme}
       onChange={onChange}
       name="UNIQUE_ID_OF_DIV"
-      // editorProps={{ $blockScrolling: true }}
-      // height={"inherit"}
-      // width={"inherit"}
+      editorProps={{ $blockScrolling: true }}
       width={"100%"}
       height={"100%"}
       displayIndentGuides={true}

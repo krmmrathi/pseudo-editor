@@ -1,15 +1,12 @@
+/* eslint-disable jsx-a11y/iframe-has-title */
 import React from "react";
-export const OutputComponent = (props) => {
-  let iframe_ref = null;
-
+export const IframeComponent = (props) => {
   const writeHTML = (frame) => {
     if (!frame) {
       return;
     }
-    iframe_ref = frame;
     let doc = frame.contentDocument;
     frame.style.width = "100%";
-    //frame.style.height = `${frame.contentWindow.document.body.scrollHeight}px`;
     frame.style.height = "100%";
     frame.style.backgroundColor = "white";
     doc.open();
@@ -26,4 +23,3 @@ export const OutputComponent = (props) => {
     />
   );
 };
-// export default OutputComponent;
