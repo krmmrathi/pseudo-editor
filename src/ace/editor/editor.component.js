@@ -18,7 +18,7 @@ export const EditorComponent = ({ onChange, theme }) => {
       displayIndentGuides={true}
       wrapEnabled={true}
       highlightActiveLine={true}
-      showPrintMargin={true}
+      showPrintMargin={false}
       showGutter={true}
     />
   );
